@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Feedback Form</h1>
+      <p id="description"></p>
+    </header>
+    <main>
+      <form id="survey-form" action="">
+        <fieldset>
+          <label for="name" id="name-label">Enter your Name:</label>
+          <input type="text" name="name" id="name" required />
+          <label for="company-name" id="company-name-label">Enter the company name:</label>
+          <input type="text" name="company-name" id="company-name" required />
+          <label for="email" id="email-label"></label>>Enter your Email:</label>
+          <input type="text" name="email" id="email" required />
+          <label for="number" id="number-label"></label>>Enter the date of the interview:</label>
+          <input type="datetime-local" name="age" id="number" required />
+          <label for="dropdown">Enter the interview format:</label>
+          <select id="dropdown">
+              <option>(select one)</option>
+              <option>Structured interview</option>
+              <option>Situational interview</option>
+              <option>A projective interview</option>
+              <option>Behavioral (competency interview)</option>
+              <option>Stress Interview</option>
+          </select>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
