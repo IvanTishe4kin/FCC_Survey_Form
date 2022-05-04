@@ -4,42 +4,176 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/FCC_Survey_Form/styles .css"
+    />
     <title>Survey form</title>
   </head>
-  <body>
+  <body class="img1">
     <header>
       <h1 id="title">Feedback Form</h1>
-      <p id="description"></p>
+      <p id="description">If you were looking for me, you found me</p>
     </header>
     <main>
       <form id="survey-form" action="">
         <fieldset>
-          <label for="name" id="name-label">Enter your Name:</label>
-          <input type="text" name="name" id="name" required />
-          <label for="company-name" id="company-name-label">Enter the company name:</label>
-          <input type="text" name="company-name" id="company-name" required />
-          <label for="email" id="email-label"></label>>Enter your Email:</label>
-          <input type="text" name="email" id="email" required />
-          <label for="number" id="number-label"></label>>Enter the date of the interview:</label>
-          <input type="datetime-local" name="age" id="number" required />
-          <label for="dropdown">Enter the interview format:</label>
+          <label id="name-label" for="name">Enter your Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            autofocus
+            required
+          />
+          <label for="company-name" id="company-name-label"
+            >Enter the company name:</label
+          >
+          <input
+            type="text"
+            name="company-name"
+            id="company-name"
+            placeholder="Company Name"
+            required
+          />
+          <label id="email-label" for="email">Enter your Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+          <label for="number" id="number-label"
+            >Enter your favorite number:</label
+          >
+          <input
+            type="number"
+            name="number"
+            id="number"
+            min="0"
+            max="1000"
+            placeholder="Number"
+            required
+          />
+          <label for="data" id="data-label"
+            >Enter the date of the interview:</label
+          >
+          <input
+            type="datetime-local"
+            name="data"
+            id="data"
+            value="2022-06-19T08:30"
+            min="2022-06-01T08:30"
+            max="2022-06-30T16:30"
+            required
+          />
+          <label for="dropdown">Choose the interview format:</label>
           <select id="dropdown">
-              <option value="">(select one)</option>
-              <option value="1">Structured interview</option>
-              <option value="2">Situational interview</option>
-              <option value="3">A projective interview</option>
-              <option value="4">Behavioral (competency interview)</option>
-              <option value="5">Stress Interview</option>
+            <option value="">(select one)</option>
+            <option value="1">Structured interview</option>
+            <option value="2">Situational interview</option>
+            <option value="3">A projective interview</option>
+            <option value="4">Behavioral (competency interview)</option>
+            <option value="5">Stress Interview</option>
           </select>
         </fieldset>
         <fieldset>
-          <label></label>
-          <input type="radio"/>
-          <label></label>
-          <input type="radio"/>
-          <label></label>
-          <input type="radio"/>
+          <legend class="l-left">How many your company want to pay me?</legend>
+          <label for="many"
+            ><input
+              type="radio"
+              id="many"
+              name="price"
+              value="many"
+              checked
+            />Many</label
+          >
+          <label for="low"
+            ><input type="radio" id="low" name="price" value="low" />A few
+            coins</label
+          >
+          <label for="overprice"
+            ><input
+              type="radio"
+              id="overprice"
+              name="price"
+              value="overprice"
+            />Overprice</label
+          >
         </fieldset>
+        <fieldset>
+          <legend class="l-center">
+            What skills do you value in employees?
+          </legend>
+          <label for="hard"
+            ><input
+              type="checkbox"
+              id="hard"
+              name="hard"
+              value="hard"
+              checked
+              required
+            />Hard skills</label
+          >
+          <label for="soft"
+            ><input
+              type="checkbox"
+              id="soft"
+              name="soft"
+              value="soft"
+              required
+            />Soft skills</label
+          >
+          <label for="food"
+            ><input
+              type="checkbox"
+              id="food"
+              name="food"
+              value="food"
+              required
+            />Work for food</label
+          >
+        </fieldset>
+        <fieldset>
+          <legend class="l-right">Congratulations and wishes</legend>
+          <label for="file">Upload a money picture:</label>
+          <input type="file" id="file" name="file" />
+          <label for="wishes">If you want to say hello to me: </label>
+          <textarea
+            name="wishes"
+            id="wishes"
+            cols="20"
+            rows="3"
+            placeholder="Сonfidential information is written here..."
+          ></textarea>
+          <label for="range">Your assessment of the form: (0/100) </label>
+          <input
+            type="range"
+            id="range"
+            min="0"
+            max="100"
+            list="tickmarks"
+            value="50"
+            required
+          />
+          <datalist id="tickmarks">
+            <option value="0"></option>
+            <option value="10"></option>
+            <option value="20"></option>
+            <option value="30"></option>
+            <option value="40"></option>
+            <option value="50"></option>
+            <option value="60"></option>
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100"></option>
+          </datalist>
+        </fieldset>
+        <input type="submit" id="submit" value="Submit" />
       </form>
     </main>
   </body>
